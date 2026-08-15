@@ -8,21 +8,30 @@ const MAPS = {
   home: 'https://www.google.com/maps/search/?api=1&query=%E3%82%BB%E3%83%96%E3%83%B3%E3%82%A4%E3%83%AC%E3%83%96%E3%83%B3+%E3%81%A4%E3%81%8F%E3%81%B0%E5%A4%A7%E7%A0%82%E5%BA%97'
 };
 
+const PHONEBOOK = {
+  greenbokujo: { name:'伊香保グリーン牧場', phone:'0279-24-5335', tel:'0279245335' },
+  hara: { name:'原美術館ARC', phone:'0279-24-6585', tel:'0279246585' },
+  osawaya: { name:'大澤屋 第二店舗', phone:'0279-72-5566', tel:'0279725566' },
+  mimatsu: { name:'美松館', phone:'0279-72-2655', tel:'0279722655' },
+  skyland: { name:'渋川スカイランドパーク', phone:'0279-20-1589', tel:'0279201589' },
+  konnyaku: { name:'こんにゃくパーク', phone:'0274-60-4100', tel:'0274604100' }
+};
+
 const events = [
   {
     day:1,time:'〜13:30',start:'2026-08-15T12:00:00+09:00',end:'2026-08-15T13:30:00+09:00',
     title:'原美術館ARC',text:'伊香保グリーン牧場内。見学後は水沢へ移動。',note:'見終わったら水沢うどんへ。',
-    tag:'現在',map:MAPS.hara,action:'地図'
+    tag:'現在',map:MAPS.hara,phone:PHONEBOOK.hara,action:'地図'
   },
   {
     day:1,time:'13:40頃',start:'2026-08-15T13:40:00+09:00',end:'2026-08-15T14:50:00+09:00',
     title:'大澤屋 第二店舗',text:'水沢うどん。待ち時間込みで14:50頃までを目安。',note:'水沢うどん。混雑したら石段街を少し短縮。',
-    tag:'昼食',map:MAPS.osawaya,action:'ナビを開く',primary:true
+    tag:'昼食',map:MAPS.osawaya,phone:PHONEBOOK.osawaya,action:'ナビを開く',primary:true
   },
   {
     day:1,time:'15:00頃',start:'2026-08-15T15:00:00+09:00',end:'2026-08-15T15:15:00+09:00',
     title:'美松館へ車を預ける',text:'車と荷物を置いてから石段街へ。チェックイン可能なら先に済ませる。',note:'車と荷物を置いて、徒歩で石段街へ。',
-    map:MAPS.mimatsu,action:'美松館へ',primary:true
+    map:MAPS.mimatsu,phone:PHONEBOOK.mimatsu,action:'美松館へ',primary:true
   },
   {
     day:1,time:'15:15〜',start:'2026-08-15T15:15:00+09:00',end:'2026-08-15T16:30:00+09:00',
@@ -32,21 +41,21 @@ const events = [
   {
     day:1,time:'夕方〜',start:'2026-08-15T16:30:00+09:00',end:'2026-08-16T08:15:00+09:00',
     title:'美松館',text:'温泉 → 夕食 → 宿泊。翌朝は朝食後、8:15出発目標。',note:'温泉・夕食・宿泊。明日は8:15出発。',
-    tag:'宿泊',map:MAPS.mimatsu
+    tag:'宿泊',map:MAPS.mimatsu,phone:PHONEBOOK.mimatsu
   },
   {
     day:2,time:'8:15',start:'2026-08-16T08:15:00+09:00',end:'2026-08-16T08:40:00+09:00',
-    title:'美松館 出発',text:'朝食・荷造り・チェックアウトを済ませて出発。',note:'朝食・チェックアウト後、遊園地へ。',map:MAPS.skyland
+    title:'美松館 出発',text:'朝食・荷造り・チェックアウトを済ませて出発。',note:'朝食・チェックアウト後、遊園地へ。',map:MAPS.skyland,phone:PHONEBOOK.mimatsu
   },
   {
     day:2,time:'8:40頃',start:'2026-08-16T08:40:00+09:00',end:'2026-08-16T09:00:00+09:00',
     title:'渋川スカイランドパーク',text:'開園前に駐車して9:00スタート。',note:'開園前に駐車。9:00から遊ぶ。',
-    tag:'到着',map:MAPS.skyland,action:'ナビを開く',primary:true
+    tag:'到着',map:MAPS.skyland,phone:PHONEBOOK.skyland,action:'ナビを開く',primary:true
   },
   {
     day:2,time:'9:00<br>〜11:30',start:'2026-08-16T09:00:00+09:00',end:'2026-08-16T11:30:00+09:00',
     title:'スカイランドパーク',text:'乗りたいアトラクションを優先。11:30を撤収目標。',note:'乗りたいもの優先。11:30撤収目標。',
-    tag:'メイン',map:MAPS.skyland
+    tag:'メイン',map:MAPS.skyland,phone:PHONEBOOK.skyland
   },
   {
     day:2,time:'11:30<br>〜12:10',start:'2026-08-16T11:30:00+09:00',end:'2026-08-16T12:10:00+09:00',
@@ -55,16 +64,16 @@ const events = [
   {
     day:2,time:'12:10',start:'2026-08-16T12:10:00+09:00',end:'2026-08-16T13:35:00+09:00',
     title:'こんにゃくパークへ移動',text:'13:20〜13:40着目標。14:20集合に間に合うことを最優先。',note:'13:20〜13:40着目標。14:20必着。',
-    tag:'時間厳守',orange:true,map:MAPS.konnyaku,action:'ナビを開く',warn:true
+    tag:'時間厳守',orange:true,map:MAPS.konnyaku,phone:PHONEBOOK.konnyaku,action:'ナビを開く',warn:true
   },
   {
     day:2,time:'13:35頃',start:'2026-08-16T13:35:00+09:00',end:'2026-08-16T14:20:00+09:00',
-    title:'受付・試食バイキング',text:'本館1F団体カウンターで支払い → ファストパス受取 → 試食。',note:'受付・支払い・ファストパス受取。',map:MAPS.konnyaku
+    title:'受付・試食バイキング',text:'本館1F団体カウンターで支払い → ファストパス受取 → 試食。',note:'受付・支払い・ファストパス受取。',map:MAPS.konnyaku,phone:PHONEBOOK.konnyaku
   },
   {
     day:2,time:'14:20<br>集合',start:'2026-08-16T14:20:00+09:00',end:'2026-08-16T15:30:00+09:00',
     title:'Cコース 手作りこんにゃく体験',text:'<strong class="danger">14:20集合 / 14:30開始</strong>。約60分。遅刻すると参加不可。',note:'14:20集合・14:30開始。約60分。',
-    tag:'予約済み',orange:true,reserve:true,map:MAPS.konnyaku
+    tag:'予約済み',orange:true,reserve:true,map:MAPS.konnyaku,phone:PHONEBOOK.konnyaku
   },
   {
     day:2,time:'15:45<br>目標',start:'2026-08-16T15:45:00+09:00',end:'2026-08-16T18:45:00+09:00',
@@ -77,9 +86,14 @@ const route = ['富岡IC','E18','藤岡JCT','高崎JCT','E50 北関東道','岩�
 
 function eventHTML(e){
   const tag = e.tag ? `<span class="tag${e.orange?' orange':''}">${e.tag}</span>` : '';
-  const action = e.action && e.map
-    ? `<div class="event-actions"><a class="action${e.primary?' primary':''}${e.warn?' warn':''}" href="${e.map}" target="_blank" rel="noopener">${e.action}</a></div>`
-    : '';
+  const actionButtons = [];
+  if(e.action && e.map){
+    actionButtons.push(`<a class="action${e.primary?' primary':''}${e.warn?' warn':''}" href="${e.map}" target="_blank" rel="noopener">${e.action}</a>`);
+  }
+  if(e.phone){
+    actionButtons.push(`<a class="action" href="tel:${e.phone.tel}">☎ ${e.phone.phone}</a>`);
+  }
+  const action = actionButtons.length ? `<div class="event-actions">${actionButtons.join('')}</div>` : '';
   return `<article class="event" data-start="${e.start}" data-end="${e.end}">
     <div class="dot"></div>
     <div class="time">${e.time}</div>
@@ -94,6 +108,32 @@ function eventHTML(e){
 document.getElementById('day1Timeline').innerHTML = events.filter(e=>e.day===1).map(eventHTML).join('');
 document.getElementById('day2Timeline').innerHTML = events.filter(e=>e.day===2).map(eventHTML).join('');
 document.getElementById('returnRoute').innerHTML = route.map((x,i)=>`${i?'<span class="route-arrow">→</span>':''}<span class="route-chip">${x}</span>`).join('');
+
+function injectPhoneBook(){
+  const fine = document.querySelector('.fine');
+  if(!fine || document.getElementById('phones')) return;
+
+  const section = document.createElement('section');
+  section.className = 'section';
+  section.id = 'phones';
+  section.innerHTML = `
+    <div class="section-head">
+      <div><div class="section-kicker">CAR NAVI</div><h2>電話番号</h2></div>
+      <div class="section-kicker">車載ナビ入力用</div>
+    </div>
+    <div class="reserve-grid">
+      ${Object.values(PHONEBOOK).map(x=>`
+        <div class="info-box wide">
+          <div class="k">${x.name}</div>
+          <div class="v">${x.phone}</div>
+          <div class="event-actions"><a class="action" href="tel:${x.tel}">電話をかける</a></div>
+        </div>`).join('')}
+    </div>
+  `;
+  fine.before(section);
+}
+
+injectPhoneBook();
 
 function formatHM(d){
   return new Intl.DateTimeFormat('ja-JP',{hour:'2-digit',minute:'2-digit',hour12:false,timeZone:'Asia/Tokyo'}).format(d);
