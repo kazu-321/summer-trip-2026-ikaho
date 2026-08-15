@@ -1,112 +1,104 @@
 <!doctype html>
 <html lang="ja">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#153a34">
-<title>伊香保 家族旅行 2026</title>
-<style>
-:root{--bg:#f4f2ec;--card:#fff;--ink:#17211f;--muted:#65716e;--accent:#153a34;--accent2:#d9903d;--line:#dfe4df;--warn:#8b3d2f;--soft:#edf3ef;--shadow:0 8px 24px rgba(0,0,0,.06)}
-*{box-sizing:border-box}
-body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Sans","Noto Sans JP",sans-serif;background:var(--bg);color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased}
-.wrap{max-width:760px;margin:0 auto;padding:16px 14px 50px}
-header{background:linear-gradient(135deg,#153a34,#245e54);color:#fff;padding:24px 20px 20px;border-radius:24px;box-shadow:var(--shadow);margin-bottom:14px}
-header .date{font-size:13px;opacity:.8;letter-spacing:.04em}
-h1{font-size:28px;line-height:1.2;margin:6px 0}
-header p{margin:0;font-size:14px;opacity:.88}.updated{margin-top:14px;font-size:12px;opacity:.7}
-.tabs{display:grid;grid-template-columns:1fr 1fr;gap:8px;position:sticky;top:8px;z-index:10;margin:12px 0}
-.tabs a{text-align:center;text-decoration:none;color:var(--accent);background:rgba(255,255,255,.95);border:1px solid var(--line);padding:11px 8px;border-radius:14px;font-weight:700;box-shadow:0 4px 16px rgba(0,0,0,.04)}
-section{background:var(--card);border-radius:18px;box-shadow:var(--shadow);padding:18px;margin:12px 0}
-.section-title{display:flex;align-items:baseline;gap:10px;margin-bottom:12px}.section-title h2{font-size:21px;margin:0}.sub{font-size:12px;color:var(--muted)}
-.timeline{display:flex;flex-direction:column}.event{display:grid;grid-template-columns:64px 1fr;gap:12px;position:relative;padding-bottom:18px}
-.event:not(:last-child)::after{content:"";position:absolute;left:31px;top:28px;bottom:0;width:2px;background:var(--line)}
-.time{font-size:13px;font-weight:800;color:var(--accent);padding-top:2px;text-align:center}
-.dot{width:10px;height:10px;border-radius:50%;background:var(--accent2);position:absolute;left:27px;top:6px;border:2px solid #fff;box-shadow:0 0 0 2px var(--accent2)}
-.event-card{background:#fbfcfb;border:1px solid var(--line);border-radius:14px;padding:12px 13px}.event-card strong{display:block;font-size:16px;margin-bottom:3px}.event-card p{margin:0;color:var(--muted);font-size:13px}.important{color:var(--warn)!important;font-weight:700}
-.buttons{display:flex;flex-wrap:wrap;gap:7px;margin-top:10px}.btn{display:inline-block;text-decoration:none;border-radius:999px;padding:7px 11px;font-size:12px;font-weight:700;border:1px solid var(--line);color:var(--accent);background:#fff}.btn.primary{background:var(--accent);color:#fff;border-color:var(--accent)}
-.reservation{background:#fff8ee!important;border-color:#eed4b0!important}.badge{display:inline-block;background:var(--accent2);color:#fff;font-size:11px;font-weight:800;padding:3px 8px;border-radius:999px;margin-bottom:8px}
-dl{margin:0;display:grid;grid-template-columns:112px 1fr;gap:7px 10px;font-size:14px}dt{color:var(--muted)}dd{margin:0;font-weight:600}
-.route{display:flex;flex-wrap:wrap;align-items:center;gap:6px;font-size:13px;font-weight:700}.route span{background:var(--soft);padding:6px 9px;border-radius:10px}.arrow{color:var(--muted)}
-.note{border-left:4px solid var(--accent2);padding:9px 12px;background:#fffaf3;border-radius:0 12px 12px 0;font-size:13px;margin-top:10px}
-.checklist{display:grid;gap:8px;font-size:14px}.checklist div{display:flex;gap:9px}.check{font-weight:900;color:var(--accent)}
-footer{text-align:center;color:var(--muted);font-size:11px;padding:22px 0}
-@media(max-width:430px){.wrap{padding:10px 10px 40px}header{border-radius:20px;padding:20px 17px}h1{font-size:25px}section{padding:15px}.event{grid-template-columns:58px 1fr;gap:9px}.event:not(:last-child)::after{left:28px}.dot{left:24px}dl{grid-template-columns:95px 1fr}}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#123C35">
+  <title>伊香保 家族旅行 2026</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="wrap">
-<header>
-<div class="date">2026.08.15 SAT — 08.16 SUN</div>
-<h1>伊香保 家族旅行</h1>
-<p>当日の予定・予約・移動情報</p>
-<div class="updated">最終更新：2026/08/15 12:45</div>
-</header>
+  <main class="shell">
+    <section class="hero" aria-label="旅行概要">
+      <div class="eyebrow">SUMMER TRIP 2026</div>
+      <h1>伊香保 家族旅行</h1>
+      <p class="hero-sub">8月15日（土）— 16日（日）</p>
+      <div class="hero-meta">
+        <span class="meta-chip">宿泊：美松館</span>
+        <span class="meta-chip">帰着目標：16日 19:00まで</span>
+      </div>
+    </section>
 
-<nav class="tabs"><a href="#day1">8/15 今日</a><a href="#day2">8/16 明日</a></nav>
+    <section class="now-card" aria-live="polite">
+      <div class="now-label">
+        <span id="nowBadge">次の予定</span>
+        <span class="updated" id="updatedText">現在時刻を確認中</span>
+      </div>
+      <div class="now-main">
+        <div>
+          <div class="now-time" id="nowTime">—</div>
+          <div class="now-title" id="nowTitle">予定を読み込み中</div>
+          <div class="now-note" id="nowNote"></div>
+        </div>
+        <a class="action primary" id="nowAction" href="#" target="_blank" rel="noopener">ナビ</a>
+      </div>
+    </section>
 
-<section id="day1">
-<div class="section-title"><h2>8/15（土）</h2><span class="sub">牧場 → うどん → 石段街 → 美松館</span></div>
-<div class="timeline">
-<div class="event"><div class="dot"></div><div class="time">現在</div><div class="event-card"><strong>伊香保グリーン牧場 / 原美術館ARC</strong><p>美術館を見たあと、水沢うどんへ移動。</p><div class="buttons"><a class="btn" href="https://maps.google.com/?q=%E5%8E%9F%E7%BE%8E%E8%A1%93%E9%A4%A8ARC" target="_blank">地図</a></div></div></div>
-<div class="event"><div class="dot"></div><div class="time">13:40頃</div><div class="event-card"><strong>大澤屋 第二店舗</strong><p>水沢うどん。混雑で押したら石段街の滞在時間を調整。</p><div class="buttons"><a class="btn primary" href="https://maps.google.com/?q=%E5%A4%A7%E6%BE%A4%E5%B1%8B+%E7%AC%AC%E4%BA%8C%E5%BA%97%E8%88%97" target="_blank">ナビを開く</a></div></div></div>
-<div class="event"><div class="dot"></div><div class="time">15:00頃</div><div class="event-card"><strong>美松館へ車を預ける</strong><p>宿に車を置いてから徒歩で石段街へ。</p><div class="buttons"><a class="btn primary" href="https://maps.google.com/?q=%E7%BE%8E%E6%9D%BE%E9%A4%A8+%E4%BC%8A%E9%A6%99%E4%BF%9D" target="_blank">美松館へ</a></div></div></div>
-<div class="event"><div class="dot"></div><div class="time">15:15〜</div><div class="event-card"><strong>伊香保 石段街</strong><p>射的・温泉まんじゅう・お土産・散策。雨が強ければ短縮。</p><div class="buttons"><a class="btn" href="https://maps.google.com/?q=%E4%BC%8A%E9%A6%99%E4%BF%9D%E6%B8%A9%E6%B3%89+%E7%9F%B3%E6%AE%B5%E8%A1%97" target="_blank">地図</a></div></div></div>
-<div class="event"><div class="dot"></div><div class="time">夕方</div><div class="event-card"><strong>美松館</strong><p>チェックイン → 温泉 → 夕食。夕食・朝食付き。</p></div></div>
-</div>
-</section>
+    <section class="section" id="day1">
+      <div class="section-head">
+        <div><div class="section-kicker">TODAY</div><h2>8/15（土）</h2></div>
+        <div class="section-kicker">牧場 → うどん → 石段街 → 宿</div>
+      </div>
+      <div class="timeline" id="day1Timeline"></div>
+    </section>
 
-<section id="day2">
-<div class="section-title"><h2>8/16（日）</h2><span class="sub">遊園地 → こんにゃくパーク → 帰宅</span></div>
-<div class="timeline">
-<div class="event"><div class="dot"></div><div class="time">8:15</div><div class="event-card"><strong>美松館 出発</strong><p>朝食・荷造り・チェックアウトを済ませて出発。</p></div></div>
-<div class="event"><div class="dot"></div><div class="time">8:40頃</div><div class="event-card"><strong>渋川スカイランドパーク 到着</strong><p>開園前に駐車。9:00から遊ぶ。</p><div class="buttons"><a class="btn primary" href="https://maps.google.com/?q=%E6%B8%8B%E5%B7%9D%E3%82%B9%E3%82%AB%E3%82%A4%E3%83%A9%E3%83%B3%E3%83%89%E3%83%91%E3%83%BC%E3%82%AF" target="_blank">ナビを開く</a></div></div></div>
-<div class="event"><div class="dot"></div><div class="time">9:00〜11:30</div><div class="event-card"><strong>スカイランドパーク</strong><p>乗りたいアトラクションを優先。11:30を撤収目標。</p></div></div>
-<div class="event"><div class="dot"></div><div class="time">11:30〜12:10</div><div class="event-card"><strong>昼食</strong><p>遊園地内で普通の昼食を取る。こんにゃくバイキングは試食として楽しむ。</p></div></div>
-<div class="event"><div class="dot"></div><div class="time">12:10</div><div class="event-card"><strong>こんにゃくパークへ出発</strong><p>14:20の集合に遅れないことを最優先。13:20〜13:40到着目標。</p><div class="buttons"><a class="btn primary" href="https://maps.google.com/?q=%E3%81%93%E3%82%93%E3%81%AB%E3%82%83%E3%81%8F%E3%83%91%E3%83%BC%E3%82%AF" target="_blank">ナビを開く</a></div></div></div>
-<div class="event"><div class="dot"></div><div class="time">13:30頃</div><div class="event-card"><strong>こんにゃくパーク</strong><p>受付・支払い → ファストパス受取 → 試食バイキング・館内。</p></div></div>
-<div class="event"><div class="dot"></div><div class="time">14:20</div><div class="event-card reservation"><div class="badge">予約済み・時間厳守</div><strong>Cコース 集合</strong><p class="important">14:30開始。遅刻すると参加できません。</p></div></div>
-<div class="event"><div class="dot"></div><div class="time">14:30〜15:30</div><div class="event-card reservation"><strong>手作りこんにゃく体験 Cコース</strong><p>こんにゃく粉から約60分。作ったこんにゃくは持ち帰り。</p></div></div>
-<div class="event"><div class="dot"></div><div class="time">15:45目標</div><div class="event-card"><strong>こんにゃくパーク 出発</strong><p>お土産・トイレを済ませたら帰宅へ。</p></div></div>
-<div class="event"><div class="dot"></div><div class="time">18:15〜18:45</div><div class="event-card"><strong>つくば大砂 到着目標</strong><p>19:00までを事故・渋滞用の余裕として確保。</p></div></div>
-</div>
-</section>
+    <section class="section" id="day2">
+      <div class="section-head">
+        <div><div class="section-kicker">TOMORROW</div><h2>8/16（日）</h2></div>
+        <div class="section-kicker">遊園地 → 体験 → 帰宅</div>
+      </div>
+      <div class="alert">
+        <div class="alert-icon">!</div>
+        <div><strong>14:20までにこんにゃくパークへ</strong><p>14:30 Cコース開始。遅刻すると体験に参加できません。</p></div>
+      </div>
+      <div class="timeline" id="day2Timeline"></div>
+    </section>
 
-<section>
-<div class="section-title"><h2>こんにゃく体験 予約</h2></div>
-<div class="reservation" style="border:1px solid #eed4b0;border-radius:14px;padding:14px">
-<dl>
-<dt>日付</dt><dd>2026/8/16</dd>
-<dt>コース</dt><dd>Cコース</dd>
-<dt>開始</dt><dd>14:30（14:20までに来園）</dd>
-<dt>所要時間</dt><dd>約60分</dd>
-<dt>人数</dt><dd>大人3名・小学生1名</dd>
-<dt>料金</dt><dd>大人 1,430円 / 小学生 990円</dd>
-<dt>持ち物</dt><dd>ハンカチ・マスク</dd>
-<dt>受付</dt><dd>本館1F 団体様カウンター</dd>
-<dt>特典</dt><dd>試食バイキング ファストパス</dd>
-</dl>
-<div class="note">体験開始時間に間に合わない場合は参加不可。14:20より前に受付を完了させる。</div>
-</div>
-</section>
+    <section class="section" id="reservation">
+      <div class="section-head">
+        <div><div class="section-kicker">RESERVATION</div><h2>こんにゃく体験</h2></div>
+        <span class="tag orange">予約済み</span>
+      </div>
+      <div class="reserve-grid">
+        <div class="info-box"><div class="k">日付</div><div class="v">8/16（日）</div></div>
+        <div class="info-box"><div class="k">集合</div><div class="v">14:20</div></div>
+        <div class="info-box"><div class="k">開始</div><div class="v">14:30</div></div>
+        <div class="info-box"><div class="k">コース</div><div class="v">C / 約60分</div></div>
+        <div class="info-box"><div class="k">人数</div><div class="v">大人3・小学生1</div></div>
+        <div class="info-box"><div class="k">料金</div><div class="v">5,280円 合計</div></div>
+        <div class="info-box wide"><div class="k">持ち物</div><div class="v">ハンカチ・マスク</div></div>
+        <div class="info-box wide"><div class="k">受付</div><div class="v">本館1F 団体様カウンター</div></div>
+      </div>
+    </section>
 
-<section>
-<div class="section-title"><h2>帰りの高速</h2><span class="sub">8/16</span></div>
-<div class="route"><span>富岡IC</span><b class="arrow">→</b><span>E18 上信越道</span><b class="arrow">→</b><span>藤岡JCT</span><b class="arrow">→</b><span>高崎JCT</span><b class="arrow">→</b><span>E50 北関東道</span><b class="arrow">→</b><span>岩舟JCT</span><b class="arrow">→</b><span>E4 東北道</span><b class="arrow">→</b><span>久喜白岡JCT</span><b class="arrow">→</b><span>C4 圏央道</span><b class="arrow">→</b><span>つくば</span></div>
-<div class="note">夕方の関越道上り渋滞を避けるため、北関東道経由を基本ルートにする。</div>
-</section>
+    <section class="section" id="route">
+      <div class="section-head">
+        <div><div class="section-kicker">RETURN ROUTE</div><h2>帰りの高速</h2></div>
+        <div class="section-kicker">関越南下を避ける</div>
+      </div>
+      <div class="route" id="returnRoute"></div>
+    </section>
 
-<section>
-<div class="section-title"><h2>明日の持ち物</h2></div>
-<div class="checklist">
-<div><span class="check">✓</span><span>こんにゃく体験用：マスク</span></div>
-<div><span class="check">✓</span><span>こんにゃく体験用：ハンカチ</span></div>
-<div><span class="check">✓</span><span>飲み物・帽子</span></div>
-<div><span class="check">✓</span><span>ETCカード確認</span></div>
-<div><span class="check">✓</span><span>宿の忘れ物確認</span></div>
-</div>
-</section>
+    <section class="section">
+      <div class="section-head"><div><div class="section-kicker">CHECK</div><h2>明日の持ち物</h2></div></div>
+      <div class="tips">
+        <div class="tip"><span class="check">✓</span><span>こんにゃく体験：マスク</span></div>
+        <div class="tip"><span class="check">✓</span><span>こんにゃく体験：ハンカチ</span></div>
+        <div class="tip"><span class="check">✓</span><span>飲み物・帽子</span></div>
+        <div class="tip"><span class="check">✓</span><span>ETCカード・宿の忘れ物確認</span></div>
+      </div>
+    </section>
 
-<footer>伊香保 家族旅行 2026</footer>
-</div>
+    <p class="fine">Summer Trip 2026 · Ikaho</p>
+  </main>
+
+  <nav class="bottom-nav" aria-label="ページ内ナビ">
+    <a href="#day1" id="navToday" class="active"><span class="nav-icon">●</span>今日</a>
+    <a href="#day2"><span class="nav-icon">○</span>明日</a>
+    <a href="#reservation"><span class="nav-icon">◇</span>予約</a>
+    <a href="#route"><span class="nav-icon">↗</span>帰り</a>
+  </nav>
+
+  <script src="app.js"></script>
 </body>
 </html>
