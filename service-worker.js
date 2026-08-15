@@ -1,6 +1,6 @@
-const CACHE='ikaho-trip-pwa-v4';
-const CORE=['./','./index.html','./udon.html','./skyland.html','./hotel.html','./other.html','./app.css','./trip.js','./pwa.js','./manifest.webmanifest','./app-icon-family-192.png','./app-icon-family-512.png','./offline.html'];
-const IMAGE_CACHE='ikaho-trip-images-v4';
+const CACHE='ikaho-trip-pwa-v5';
+const CORE=['./','./index.html','./udon.html','./skyland.html','./hotel.html','./ropeway.html','./other.html','./app.css','./trip.js','./pwa.js','./manifest.webmanifest','./app-icon-family-192.png','./app-icon-family-512.png','./offline.html'];
+const IMAGE_CACHE='ikaho-trip-images-v5';
 const EXTERNAL_IMAGES=['https://www.osawaya.co.jp/imgs/shop/shop02.webp','https://tamaruya-udon.jp/cdn/shop/files/4_1800x.jpg?v=1739945794','https://mizusawa-shimizuya.com/img/t_img6.png','https://www.skyland89.jp/uploads/2019/05/%E3%83%8D%E3%82%A4%E3%83%96%E3%83%AB%E3%82%B3%E3%83%BC%E3%82%B9%E3%82%BF%E3%83%BCs-1030x686.jpg','https://www.skyland89.jp/uploads/2019/05/SX9A8249%E2%98%85s-1030x687.jpg','https://www.skyland89.jp/uploads/2019/05/SX9A9256_-1030x687.jpg','https://www.skyland89.jp/uploads/2019/05/%E8%A6%B3%E8%A6%A7%E8%BB%8A%E3%83%A8%E3%82%B3s-1030x687.jpg'];
 self.addEventListener('install',event=>{event.waitUntil((async()=>{const cache=await caches.open(CACHE);await cache.addAll(CORE);const imageCache=await caches.open(IMAGE_CACHE);await Promise.allSettled(EXTERNAL_IMAGES.map(async url=>{const response=await fetch(url,{mode:'no-cors',cache:'no-cache'});await imageCache.put(url,response)}));await self.skipWaiting()})())});
 self.addEventListener('activate',event=>{event.waitUntil((async()=>{const keep=new Set([CACHE,IMAGE_CACHE]);const keys=await caches.keys();await Promise.all(keys.filter(key=>!keep.has(key)).map(key=>caches.delete(key)));await self.clients.claim()})())});
