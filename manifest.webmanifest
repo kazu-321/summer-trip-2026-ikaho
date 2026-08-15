@@ -2,34 +2,22 @@
   "id": "./",
   "name": "伊香保 夏旅行 2026",
   "short_name": "伊香保旅行",
-  "description": "伊香保家族旅行の旅程・水沢うどん・遊園地・予約・車載ナビ情報",
+  "description": "伊香保旅行の旅程・うどん・遊園地・旅館・予約・帰路をまとめた旅行ポータル",
   "lang": "ja-JP",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
   "orientation": "portrait-primary",
-  "background_color": "#f4f1ea",
-  "theme_color": "#123c35",
+  "background_color": "#f3f1ec",
+  "theme_color": "#113b34",
   "icons": [
-    {
-      "src": "./icon.svg",
-      "sizes": "any",
-      "type": "image/svg+xml",
-      "purpose": "any maskable"
-    }
+    {"src":"./app-icon-192.png","sizes":"192x192","type":"image/png","purpose":"any"},
+    {"src":"./app-icon-512.png","sizes":"512x512","type":"image/png","purpose":"any maskable"}
   ],
   "shortcuts": [
-    {
-      "name": "水沢うどん",
-      "short_name": "うどん",
-      "url": "./udon.html",
-      "icons": [{"src":"./icon.svg","sizes":"any","type":"image/svg+xml"}]
-    },
-    {
-      "name": "スカイランドパーク",
-      "short_name": "遊園地",
-      "url": "./skyland.html",
-      "icons": [{"src":"./icon.svg","sizes":"any","type":"image/svg+xml"}]
-    }
+    {"name":"水沢うどん","short_name":"うどん","url":"./udon.html","icons":[{"src":"./app-icon-192.png","sizes":"192x192","type":"image/png"}]},
+    {"name":"スカイランドパーク","short_name":"遊園地","url":"./skyland.html","icons":[{"src":"./app-icon-192.png","sizes":"192x192","type":"image/png"}]},
+    {"name":"美松館","short_name":"旅館","url":"./hotel.html","icons":[{"src":"./app-icon-192.png","sizes":"192x192","type":"image/png"}]},
+    {"name":"その他情報","short_name":"その他","url":"./other.html","icons":[{"src":"./app-icon-192.png","sizes":"192x192","type":"image/png"}]}
   ]
 }
