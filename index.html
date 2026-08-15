@@ -54,6 +54,33 @@
       <div class="timeline" id="day2Timeline"></div>
     </section>
 
+    <section class="section" id="food">
+      <div class="section-head">
+        <div><div class="section-kicker">FOOD GUIDE</div><h2>飲食・メニュー</h2></div>
+        <div class="section-kicker">写真はイメージ</div>
+      </div>
+      <div class="media-stack" id="foodCards"></div>
+    </section>
+
+    <section class="section" id="attractions">
+      <div class="section-head">
+        <div><div class="section-kicker">SKYLAND PARK</div><h2>アトラクション</h2></div>
+        <a class="text-link" href="https://www.skyland89.jp/attraction/" target="_blank" rel="noopener">公式一覧 ↗</a>
+      </div>
+      <div class="price-strip">
+        <div><span>1DAYパス</span><strong>大人 2,300円</strong></div>
+        <div><span>3歳以上</span><strong>1,800円</strong></div>
+      </div>
+      <div class="tiny-note">アトラクション・売店は現金のみ。入園窓口は現金 / PayPay、レストランは電子決済対応。</div>
+      <div class="attraction-grid" id="attractionCards"></div>
+      <div class="more-rides" id="moreRides"></div>
+    </section>
+
+    <section class="section" id="official">
+      <div class="section-head"><div><div class="section-kicker">OFFICIAL LINKS</div><h2>公式サイト</h2></div></div>
+      <div class="official-grid" id="officialLinks"></div>
+    </section>
+
     <section class="section" id="reservation">
       <div class="section-head">
         <div><div class="section-kicker">RESERVATION</div><h2>こんにゃく体験</h2></div>
@@ -69,6 +96,10 @@
         <div class="info-box wide"><div class="k">持ち物</div><div class="v">ハンカチ・マスク</div></div>
         <div class="info-box wide"><div class="k">受付</div><div class="v">本館1F 団体様カウンター</div></div>
       </div>
+      <div class="button-row">
+        <a class="action" href="https://www.konnyaku-park.com/kitchen/" target="_blank" rel="noopener">体験公式 ↗</a>
+        <a class="action" href="https://www.konnyaku-park.com/free-buffet/" target="_blank" rel="noopener">バイキング公式 ↗</a>
+      </div>
     </section>
 
     <section class="section" id="route">
@@ -77,6 +108,11 @@
         <div class="section-kicker">関越南下を避ける</div>
       </div>
       <div class="route" id="returnRoute"></div>
+    </section>
+
+    <section class="section" id="phonebook">
+      <div class="section-head"><div><div class="section-kicker">CAR NAVI</div><h2>車載ナビ用 電話番号</h2></div></div>
+      <div class="phone-grid" id="phoneGrid"></div>
     </section>
 
     <section class="section">
@@ -93,10 +129,11 @@
   </main>
 
   <nav class="bottom-nav" aria-label="ページ内ナビ">
-    <a href="#day1" id="navToday" class="active"><span class="nav-icon">●</span>今日</a>
+    <a href="#day1" class="active"><span class="nav-icon">●</span>今日</a>
     <a href="#day2"><span class="nav-icon">○</span>明日</a>
+    <a href="#food"><span class="nav-icon">♨</span>食事</a>
+    <a href="#attractions"><span class="nav-icon">★</span>遊ぶ</a>
     <a href="#reservation"><span class="nav-icon">◇</span>予約</a>
-    <a href="#route"><span class="nav-icon">↗</span>帰り</a>
   </nav>
 
   <script src="app.js"></script>
