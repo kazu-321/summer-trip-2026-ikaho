@@ -1,0 +1,35 @@
+{
+  "id": "./",
+  "name": "伊香保 夏旅行 2026",
+  "short_name": "伊香保旅行",
+  "description": "伊香保家族旅行の旅程・水沢うどん・遊園地・予約・車載ナビ情報",
+  "lang": "ja-JP",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#f4f1ea",
+  "theme_color": "#123c35",
+  "icons": [
+    {
+      "src": "./icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "水沢うどん",
+      "short_name": "うどん",
+      "url": "./udon.html",
+      "icons": [{"src":"./icon.svg","sizes":"any","type":"image/svg+xml"}]
+    },
+    {
+      "name": "スカイランドパーク",
+      "short_name": "遊園地",
+      "url": "./skyland.html",
+      "icons": [{"src":"./icon.svg","sizes":"any","type":"image/svg+xml"}]
+    }
+  ]
+}
